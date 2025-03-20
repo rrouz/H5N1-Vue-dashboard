@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import IsolationSourceView from './views/IsolationSourceView.vue'
+import HostView from './views/HostSourceView.vue'  // Import the new component
 
 const router = createRouter({
   history: createWebHistory(),
@@ -15,6 +16,11 @@ const router = createRouter({
       path: '/isolations',
       name: 'isolations',
       component: IsolationSourceView
+    },
+    {
+      path: '/hosts',  // Add the new route
+      name: 'hosts',
+      component: HostView
     }
   ]
 })
