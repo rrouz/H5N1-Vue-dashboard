@@ -20,7 +20,6 @@
   function renderChart() {
     if (!props.data || props.data.length === 0 || !chartContainer.value) return;
   
-    // Clear previous chart
     chartContainer.value.innerHTML = '';
     
     // Sort data by value
@@ -51,16 +50,13 @@
           ]
         });
     
-    // Append to container
     chartContainer.value.appendChild(chart);
   }
   
-  // Render on mount and when props change
   onMounted(renderChart);
   watch(() => props.data, renderChart, { deep: true });
   watch(() => props.horizontal, renderChart);
   
-  // Clean up
   onBeforeUnmount(() => {
     if (chartContainer.value) {
       chartContainer.value.innerHTML = '';
