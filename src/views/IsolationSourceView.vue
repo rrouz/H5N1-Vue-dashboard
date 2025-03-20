@@ -13,7 +13,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import PlotBarChart from '../components/PlotBarChart.vue';
-import { getIsolationSourceDistribution } from '../services/elasticsearchApi.js';
+import { getIsolationSourceDistribution } from '../services/postgresApi.js';
 
 const displayLimit = ref(20);
 const horizontal = ref(true);
