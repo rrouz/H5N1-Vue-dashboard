@@ -2,6 +2,10 @@
   <div id="app">
     <header>
       <h1>Elasticsearch Visualizations</h1>
+      <nav>
+        <router-link to="/isolations">Isolation Sources</router-link> | 
+        <router-link to="/hosts">Hosts</router-link>
+      </nav>
     </header>
     
     <main>
@@ -56,5 +60,20 @@ select, button {
   padding: 0.5rem;
   border-radius: 4px;
   border: 1px solid #ccc;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+nav a.router-link-active {
+  font-weight: bold;
+  text-decoration: underline;
 }
 </style>
